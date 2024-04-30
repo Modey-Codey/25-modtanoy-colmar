@@ -5,7 +5,7 @@
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 64px;
     line-height: 1;
     margin-bottom: 10px;
 }
@@ -47,8 +47,7 @@ height: 100%;
 }
 
 header {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 24px;
     display: flex;
     justify-content: space-between;
     margin: auto;
@@ -64,17 +63,28 @@ header {
         height: 64px;
         width: 64px;
         }
-        .logo-text {
-        flex: 1;
-        }
     } 
+
+    .text {
+        display: flex;
+        justify-content: center;
+        font-size: 32px;
+        margin: 10px;
+    }
+
+    .logo-text {
+        display: flex;
+        flex-direction: row;
+       
+        }
+
     nav {
         display: flex;
         align-items: center;
         ul {
             display: flex;
             list-style-type: none;
-            gap: 5px;
+            gap: 16px;
             li {
             a {
                 display: inline-block;
@@ -84,25 +94,95 @@ header {
             }
         } 
     }
+
     @media (max-width: 768px) {
         li {
             display: none;  
         }
-        .logo-text {
+        .text {
             display: none;
         }
         a {
-            display: flex;
-         
+            display: flex; 
         }
         .logo-media {
-            justify-content: space-evenly;
+            display: block;
             font-size: 32px;
             height: 64px;
-            width: 64px;
+            width: 64px;   
+            margin-left: 90px;    
         }
     }
 }
+ 
+button {
+padding: 20px 200px;
+background-color: #4a4a4a;
+color: white;
+font-size: 20px;
+margin-top: 30px;
+padding: 8px 100px;
+}
+
+.hero {
+    display: flex;
+    background-color: #D8D8D8;
+    padding: 32px 24px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    .hero-first {
+        flex: 1;
+        display: flex;
+        justify-content: start
+        align-items: center;
+        img {
+        object-fit: cover;
+        width: 60%;
+        }
+    } 
+    .hero-second  {
+        flex: 1;
+        padding: 30px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+.information {
+    display: flex;
+    background-color: #D8D8D8;
+    padding: 32px 24px;
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
+    .information-first {
+        flex: 1;
+        display: flex;
+        justify-content: start
+        align-items: center;
+        .inf-img {
+        object-fit: cover;
+        width: 60%;
+        }
+    } 
+    .information-second  {
+        flex: 1;
+        padding: 30px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer > p {
+    margin: 2rem;
+  }
+
 
 
 
